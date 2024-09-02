@@ -1,3 +1,3 @@
 #Repositorio de actividades
 ***
-1. [03. Tablas](Programacion-Web/03_listas/Pag1.html)
+1. [03. Tablas](/03_listas/Pag1.html)
