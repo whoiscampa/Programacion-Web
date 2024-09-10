@@ -1,0 +1,51 @@
+body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+    background-color:rgb(185, 235, 219);
+}
+
+main{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+.titulos {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-family: Sofia;
+    text-align: center;
+}
+.destacado {
+    color: rgb(3, 34, 12);
+    font-size: 30px;
+    font-family: Sofia;
+    text-align: center;
+    border-width: 5px;
+    border-style: solid;
+    border-color: blue;
+    border-radius: 10px;
+
+}
+
+#subtitulos {
+    background-color: rgb(0, 0, 0);
+    color: rgb(89, 179, 199);
+}
+footer {
+
+    background-color: aliceblue;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+}
+a {
+    font-size: 20px;
+    color: rgb(110 106, 111); 
+    text-decoration: none; 
+}
+
+a:active {
+    color: red; 
+}
+
+a:visited {
+    color: rgb(108, 105, 141); 
+}
+
