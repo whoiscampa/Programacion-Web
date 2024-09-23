@@ -1,0 +1,68 @@
+body {
+    font-family:'DM Serif Display', serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+form {
+    margin: 8% auto;
+    max-width: 400px;
+    padding: 20px;
+    background: rgb(205, 201, 201);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+input, textarea, select {
+    font-family:'DM Serif Display', serif;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    background: #f9f9f9;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    color: #0a0a0a;
+    margin-bottom: 10px;
+}
+
+h2::before {
+    content: "💬 ";
+}
+
+h2::after {
+    content: "  Llena todos los campos";
+    color: #d21e1e;
+    font-style:oblique;
+    font-size: 0.6em;
+    margin-left: 10px;
+    display: block; 
+    text-align: center;
+}
+
+
+label {
+    color: #171616;
+    margin-bottom: 5px;
+    display: block;
+}
+
+button {
+    width: auto; 
+    background: #075cb7;
+    color: white;
+    padding: 12px 20px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; 
+    margin: 0 auto; 
+}

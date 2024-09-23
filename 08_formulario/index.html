@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap">
+</head>
+<body>
+    <form action="#" method="post">
+        <h2>Formulario para contacto</h2>
+        <label>Ingrese Nombre:</label>
+        <input type="text" name="nombre" required>
+        <br><br>
+        
+        <label>Correo Electrónico:</label>
+        <input type="email" name="correo" required>
+        <br><br>
+        
+        <label>¿Por qué motivo nos contactas?</label>
+        <select name="motivo" required>
+            <optgroup label="Selecciona">
+                <option value="campaña">Participar en campaña</option>
+                <option value="informacion">Obtener más información</option>
+            </optgroup>
+        </select>
+        <br><br>
+        
+        <label for="comentarios">Comentarios:</label>
+        <br>
+        <textarea id="comentarios" name="comentarios" rows="5" placeholder="Añade tus opiniones" required></textarea>
+        <br>
+        
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
