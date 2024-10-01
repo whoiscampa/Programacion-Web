@@ -7,5 +7,6 @@
 5. [07_css_position](/07_css_position/index.html)
 6. [08_formulario](/08_formulario/index.html)
 7. [sitio](/sitio/index.html)
+8. [sitio con variables](/funciones_variables/index.html)
    
   
