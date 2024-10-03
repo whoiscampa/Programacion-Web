@@ -8,5 +8,6 @@
 6. [08_formulario](/08_formulario/index.html)
 7. [sitio](/sitio/index.html)
 8. [sitio con variables](/funciones_variables/index.html)
+9. [sitio grid](/grid_flex/index.html)
    
   
