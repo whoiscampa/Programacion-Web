@@ -9,5 +9,6 @@
 7. [sitio](/sitio/index.html)
 8. [sitio con variables](/funciones_variables/index.html)
 9. [sitio grid](/grid_flex/index.html)
+10. [sitio responsivo](/responsivo/index.html)
    
   
