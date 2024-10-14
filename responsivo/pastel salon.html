@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Globo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap">
+    <style>
+        body {
+            font-family: 'DM Serif Display', serif;
+            background-image: url('img/fondo.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        
+        }
+        .header-text {
+            color: #792135; 
+        }
+        .description-container {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        .description-container img {
+            width: 50%;
+            height: auto;
+            margin-right: 20px;
+        }
+        .description-container .text {
+            max-width: 50%;
+        }
+        .btn-custom {
+            background-color: #8B374A; 
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #66b090; 
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-light sticky-top">
+        <div class="container d-flex justify-content-between align-items-center py-2">
+            <div class="logo">
+                <a href="index.html">
+                <img class="logo-image" src="img/logo.jpg" alt="Logo el globo" style="height: 60px;">
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link header-text" href="#">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link header-text" href="#">Sucursales</a></li>
+                    <li class="nav-item"><a class="nav-link header-text" href="#">Promociones</a></li>
+                    <li class="nav-item"><a class="nav-link header-text" href="#">Lo Nuevo</a></li>
+                    <li class="nav-item"><a class="nav-link header-text" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link header-text" href="#">Invitado consentido</a></li>
+                    <li class="nav-item"><a class="nav-link header-text" href="#">Ordena aquí</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="description-container container my-4">
+            <img src="img/img1.jpg" alt="Imagen" class="img-fluid">
+            <div class="text">
+                <h1>Pastel salón</h1>
+                <p> 2.00kg</p> <br>
+                <p>
+                    Único y original pastel de chocolate embebido con jarabe marrasquino, relleno de crema de chocolate y avellanas, decorado de exquisitos rizos de chocolate de leche elaborados artesanalmente.
+                </p>
+                <p><strong>Precio:</strong> $679</p>
+                <a href="#" class="btn btn-custom">Agregar al carrito</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
