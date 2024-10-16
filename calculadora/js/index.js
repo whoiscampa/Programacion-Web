@@ -30,4 +30,4 @@ const n1 = (prompt('Ingresa el primer numero:'));
 const n2 = (prompt('Ingresa el segundo numero:'));
 const operacion = prompt('Ingresa la operación (suma, resta, multiplicacion, division):');
 
-calcular(numero1, numero2, operacion);
+calcular(n1, n2, operacion);
