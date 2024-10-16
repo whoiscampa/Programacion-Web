@@ -1,4 +1,6 @@
 function calcular(n1, n2, operacion) {
+    n1 = Number(n1);
+    n2 = Number(n2);
     let resultado;
 
     switch (operacion) {
