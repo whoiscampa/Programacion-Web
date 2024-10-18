@@ -12,6 +12,7 @@
 10. [sitio responsivo](/responsivo/index.html)
 11. [examen](/responsivo/index.html)
 12. [Calculadora](/calculadora/index.html)
+13. [manipulacion de estilos](/estilos/index.html)
 
    
   
