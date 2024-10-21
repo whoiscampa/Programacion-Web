@@ -13,6 +13,7 @@
 11. [examen](/responsivo/index.html)
 12. [Calculadora](/calculadora/index.html)
 13. [manipulacion de estilos](/estilos/index.html)
+14. [calculadora con historial](/calculadora_historial/index.html)
 
    
   
