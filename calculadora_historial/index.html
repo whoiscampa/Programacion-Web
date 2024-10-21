@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script>
+        let n1 = '';
+        let n2 = '';
+        let operacion = '';
+        let display;
+        let historial = []; 
+
+        window.onload = function() {
+            display = document.querySelector('.display');
+        };
+
+        function calcular() {
+            const num1 = Number(n1);
+            const num2 = Number(n2);
+            let resultado;
+
+            switch (operacion) {
+                case '+':
+                    resultado = num1 + num2;
+                    break;
+                case '-':
+                    resultado = num1 - num2;
+                    break;
+                case '*':
+                    resultado = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 === 0) {
+                        alert('No se puede dividir por cero.');
+                        return;
+                    }
+                    resultado = num1 / num2;
+                    break;
+                default:
+                    alert('Operación inválida');
+                    return;
+            }
+            historial.push(`${n1} ${operacion} ${n2} = ${resultado}`);
+            actualizarHistorial();
+
+            display.textContent = resultado;
+            n1 = resultado.toString(); 
+            n2 = '';
+            operacion = '';
+        }
+
+        function actualizarHistorial() {
+            const historialDiv = document.querySelector('.historial');
+            const encabezado = historialDiv.querySelector('h3'); 
+            historialDiv.innerHTML = ''; 
+            historialDiv.appendChild(encabezado); 
+            historial.forEach(item => {
+                const p = document.createElement('p');
+                p.textContent = item;
+                historialDiv.appendChild(p);
+            });
+        }
+
+        function buttonClick(value) {
+            if (['+', '-', '*', '/'].includes(value)) {
+                if (n1 === '') return; 
+                operacion = value;
+                n2 = '';
+                display.textContent = n1; 
+            } else if (value === '=') {
+                if (n1 === '' || n2 === '' || operacion === '') return; 
+                calcular();
+            } else if (value === 'c') {
+                n1 = n2 = operacion = '';
+                display.textContent = '0'; 
+            } else {
+                if (operacion === '') {
+                    n1 += value; 
+                } else {
+                    n2 += value; 
+                }
+                display.textContent = n1 + (operacion ? ' ' + operacion + ' ' + n2 : ''); 
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="display">0</div>
+            <div class="buttons">
+                <button class="btn" onclick="buttonClick('7')">7</button>
+                <button class="btn" onclick="buttonClick('8')">8</button>
+                <button class="btn" onclick="buttonClick('9')">9</button>
+                <button class="btn" onclick="buttonClick('/')">/</button>
+                <button class="btn" onclick="buttonClick('4')">4</button>
+                <button class="btn" onclick="buttonClick('5')">5</button>
+                <button class="btn" onclick="buttonClick('6')">6</button>
+                <button class="btn" onclick="buttonClick('*')">*</button>
+                <button class="btn" onclick="buttonClick('1')">1</button>
+                <button class="btn" onclick="buttonClick('2')">2</button>
+                <button class="btn" onclick="buttonClick('3')">3</button>
+                <button class="btn" onclick="buttonClick('-')">-</button>
+                <button class="btn" onclick="buttonClick('0')">0</button>
+                <button class="btn equals" onclick="buttonClick('=')">=</button>
+                <button class="btn" onclick="buttonClick('c')">C</button>
+                <button class="btn" onclick="buttonClick('+')">+</button>
+            </div>
+        </div>
+        <div class="historial">
+            <h3>Historial de calculos</h3>
+        </div>
+    </div>
+</body>
+</html>
