@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script>
+        let tareas = JSON.parse(localStorage.getItem('tareas')) || [];
+    
+        window.onload = function() {
+            actualizarLista();
+        };
+    
+        function agregarTarea() {
+            const input = document.querySelector('.input-tarea');
+            const tarea = input.value.trim();
+            if (tarea) {
+                tareas.push({ texto: tarea, completada: false });
+                input.value = '';
+                actualizarLista();
+                guardarTareas();
+            } else {
+                alert("Por favor, ingresa una tarea.");
+            }
+        }
+    
+        function eliminarTarea(index) {
+            tareas.splice(index, 1);
+            actualizarLista();
+            guardarTareas();
+        }
+    
+        function toggleCompletada(index) {
+            tareas[index].completada = !tareas[index].completada;
+            actualizarLista();
+            guardarTareas();
+        }
+    
+        function actualizarLista() {
+            const lista = document.querySelector('.lista-tareas');
+            lista.innerHTML = '';
+            tareas.forEach((tarea, index) => {
+                const li = document.createElement('li');
+                li.textContent = tarea.texto;
+                if (tarea.completada) {
+                    li.style.textDecoration = 'line-through';
+                }
+                
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.checked = tarea.completada;
+                checkbox.onclick = () => toggleCompletada(index);
+    
+                const btnEliminar = document.createElement('button');
+                btnEliminar.textContent = 'Eliminar';
+                btnEliminar.onclick = () => eliminarTarea(index);
+                
+                li.prepend(checkbox); 
+                li.appendChild(btnEliminar);
+                lista.appendChild(li);
+            });
+        }
+    
+        function guardarTareas() {
+            localStorage.setItem('tareas', JSON.stringify(tareas));
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="tarea-container">
+            <h2>Lista de tareas</h2>
+            <input type="text" class="input-tarea" placeholder="Nueva tarea">
+            <button class="btn agregar" onclick="agregarTarea()">Agregar</button>
+            <ul class="lista-tareas"></ul>
+        </div>
+    </div>
+</body>
+</html>
